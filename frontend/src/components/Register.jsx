@@ -42,7 +42,7 @@ const Register = () => {
 
   const register = (e) => {
     e.preventDefault();
-    console.log(state); // show all our information available in Register form in devTools area.
+    // console.log(state); // show all our information available in Register form in devTools area.
 
     // To send the Data from frontend(our register  form to backend(our DataBank)): from Register.jsx to authAction.js in 
     //action in store in Redux

@@ -11,15 +11,18 @@ export const userRegister = (data) => {
   return async (dispatch) => {
     const config = {
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/javascript",
       },
     };
     try {
       const response = await axios.post(
-        "/api/messenger/user-register",
+        "http://localhost:5000/api/messenger/user-register",
         data,
+        // console.log(data),
         config
       );
+      console.log(response.data);
+
       //   localStorage.setItem("authToken", response.data.token);
 
       //   dispatch({
@@ -29,7 +32,6 @@ export const userRegister = (data) => {
       //       token: response.data.token,
       //     },
       //   });
-      console.log(response.data);
     } catch (error) {
       console.log(error.response.data);
       //   dispatch({
